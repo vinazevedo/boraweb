@@ -1,6 +1,6 @@
 <div class="panel panel-default">
   <div class="panel-heading">
-    <h1>Sign up</h1>
+    <h1>Cadastre-se</h1>
   </div>
 
   <div class="panel-body">
@@ -8,7 +8,7 @@
       <%= devise_error_messages! %>
 
       <div class="form-group">
-        <%= f.label :name %>
+        <%= f.label :name, "Nome" %>
         <%= f.text_field :name, autofocus: true, class: "form-control" %>
       </div>
 
@@ -18,12 +18,12 @@
       </div>
 
       <div class="form-group">
-        <%= f.label :password %>
+        <%= f.label :password, "Senha" %>
         <%= f.password_field :password, class: "form-control" %>
       </div>
 
       <div class="form-group">
-        <%= f.submit "Sign up", class: "btn btn-primary" %>
+        <%= f.submit "Cadastrar-se", class: "btn btn-primary" %>
       </div>
     <% end %>
   </div>
