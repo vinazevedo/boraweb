@@ -8,6 +8,7 @@ $navbar-default-brand-color:	       white;
 $brand-primary:				           #c0392b;
 $link-color:					       #2c3e50;
 $navbar-default-link-hover-color:      white;
+$navbar-default-link-active-color:     white;
 
 
 
@@ -73,3 +74,33 @@ $navbar-default-link-hover-color:      white;
 	border-color: #233140;
 	font-size: 2vw;
 }
+
+span.glyphicon-calendar {
+    font-size: 1.1em;
+    z-index: 10000;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+}
+
+span.glyphicon-list {
+    font-size: 1.0em;
+    z-index: 10000;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+}
+
+span.glyphicon-cog {
+    font-size: 1.1em;
+    z-index: 10000;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+}
+
+.caret {
+    display: none
+}
+
+.dropdown-menu {
+    position:absolute;
+    text-align: right;
+}  
