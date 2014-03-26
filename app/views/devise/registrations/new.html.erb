@@ -13,6 +13,11 @@
       </div>
 
       <div class="form-group">
+        <%= f.label :surname, "Sobrenome" %>
+        <%= f.text_field :surname, autofocus: true, class: "form-control" %>
+      </div>
+
+      <div class="form-group">
         <%= f.label :email %>
         <%= f.email_field :email, autofocus: true, class: "form-control" %>
       </div>
