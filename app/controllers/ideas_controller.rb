@@ -18,8 +18,7 @@ class IdeasController < ApplicationController
   end
 
   def create
-    @idea = current_user.ideas.build(idea_params)
-
+    @idea = current_user.ideas.build(idea_params) 
       if @idea.save
         redirect_to @idea, notice: 'A ideia foi criada.' 
       else

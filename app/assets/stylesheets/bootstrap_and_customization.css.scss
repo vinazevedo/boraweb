@@ -104,7 +104,7 @@ span.glyphicon-list {
 
 span.glyphicon-cog {
     font-size: 1.1em;
-    z-index: 10000;
+    z-index: 1000;
     color: white;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
 }
@@ -122,4 +122,8 @@ span.glyphicon-cog {
     background-color: #2e5e8e;
     color: white;
     &:hover { background-color: #3976b2; color: white }
+}
+
+#alerts {
+    z-index: 1000;
 }
