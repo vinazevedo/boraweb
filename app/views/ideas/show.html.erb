@@ -1,9 +1,13 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Description:</strong>
+  <strong>Bora:</strong>
+  <%= image_tag @idea.image.url(:medium) %>
   <%= @idea.description %>
 </p>
 
-<%= link_to 'Edit', edit_idea_path(@idea) %> |
-<%= link_to 'Back', ideas_path %>
+<% if @idea.user == current_user %>
+	<%= link_to 'Editar', edit_idea_path(@idea) %> |
+<% end %>
+
+	<%= link_to 'Voltar', ideas_path %>

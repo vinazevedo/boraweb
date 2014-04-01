@@ -1,9 +1,11 @@
-<h1>Listing ideas</h1>
+<h1>Ideias recentes</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Description</th>
+      <th>Imagem</th>
+      <th>Descrição</th>
+      <th>Usuário</th>
       <th></th>
       <th></th>
       <th></th>
@@ -13,15 +15,20 @@
   <tbody>
     <% @ideas.each do |idea| %>
       <tr>
+        <td><%= image_tag idea.image.url(:thumb) %></td>
         <td><%= idea.description %></td>
-        <td><%= link_to 'Show', idea %></td>
-        <td><%= link_to 'Edit', edit_idea_path(idea) %></td>
-        <td><%= link_to 'Destroy', idea, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= idea.user.name %></td>
+        <td><%= link_to 'Ver', idea %></td>
+        <% if idea.user == current_user %>
+        <td><%= link_to 'Editar', edit_idea_path(idea) %></td>
+        <td><%= link_to 'Apagar', idea, method: :delete, data: { confirm: 'Tem certeza que quer apagar sua ideia?' } %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'New Idea', new_idea_path %>
+<% if user_signed_in? %>
+<%= link_to 'Nova ideia', new_idea_path %>
+<% end %>

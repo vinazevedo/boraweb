@@ -77,4 +77,14 @@ Boraweb::Application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
+
+  #For Paperclip to work with Amazon S3
+  config.paperclip_defaults = {
+  :storage => :s3,
+  :s3_credentials => {
+    :bucket => ENV['boraweb'],
+    :access_key_id => ENV['AKIAJXIM7I7ASC2U44DQ'],
+    :secret_access_key => ENV['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']
+  }
+}
 end

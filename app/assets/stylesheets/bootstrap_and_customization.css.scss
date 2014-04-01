@@ -74,6 +74,20 @@ $navbar-default-link-active-color:     white;
 	font-size: 2vw;
 }
 
+span.glyphicon-plus {
+    font-size: 1.1em;
+    z-index: 10000;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+}
+
+span.glyphicon-user {
+    font-size: 1.1em;
+    z-index: 10000;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+}
+
 span.glyphicon-calendar {
     font-size: 1.1em;
     z-index: 10000;

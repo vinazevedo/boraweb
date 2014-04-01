@@ -1,5 +1,7 @@
 class IdeasController < ApplicationController
   before_action :set_idea, only: [:show, :edit, :update, :destroy]
+  before_action :correct_user, only: [:edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:show]
 
   def index
     @ideas = Idea.all
@@ -9,14 +11,14 @@ class IdeasController < ApplicationController
   end
 
   def new
-    @idea = Idea.new
+    @idea = current_user.ideas.build
   end
 
   def edit
   end
 
   def create
-    @idea = Idea.new(idea_params)
+    @idea = current_user.ideas.build(idea_params)
 
       if @idea.save
         redirect_to @idea, notice: 'A ideia foi criada.' 
@@ -45,7 +47,15 @@ class IdeasController < ApplicationController
       @idea = Idea.find(params[:id])
     end
 
+    def correct_user
+      if user_signed_in?
+
+        @idea = current_user.ideas.find_by(id: params[:id])
+        redirect_to ideas_path, notice: "Apenas o criador do evento pode alterá-lo." if @idea.nil?
+      end
+    end
+
     def idea_params
-      params.require(:idea).permit(:description)
+      params.require(:idea).permit(:description, :image)
     end
 end

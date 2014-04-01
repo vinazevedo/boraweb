@@ -22,5 +22,13 @@ module Boraweb
 
     #Required for Heroku.
     config.assets.initialize_on_precompile = false
+
+    #Tradução do Devise para português.
+    config.i18n.default_locale = :'pt-BR'
+
+    #Added this to stop this message '[deprecated] I18n.enforce_available_locales 
+    #will default to true in the future. If you really want to skip validation 
+    #of your locale you can set I18n.enforce_available_locales = false to avoid this message.'
+    config.i18n.enforce_available_locales = true
   end
 end
