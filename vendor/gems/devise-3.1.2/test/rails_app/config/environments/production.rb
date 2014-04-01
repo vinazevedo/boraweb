@@ -1,4 +1,4 @@
-Boraweb::Application.configure do
+RailsApp::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
@@ -23,10 +23,10 @@ Boraweb::Application.configure do
   config.serve_static_assets = false
 
   # Compress JavaScripts and CSS.
-  config.assets.js_compressor = :uglifier
+  config.assets.js_compressor  = :uglifier
   # config.assets.css_compressor = :sass
 
-  # Do not fallback to assets pipeline if a precompiled asset is missed.
+  # Whether to fallback to assets pipeline if a precompiled asset is missed.
   config.assets.compile = false
 
   # Generate digests for assets URLs.
@@ -72,24 +72,13 @@ Boraweb::Application.configure do
   # Send deprecation notices to registered listeners.
   config.active_support.deprecation = :notify
 
+  # Log the query plan for queries taking more than this (works
+  # with SQLite, MySQL, and PostgreSQL).
+  # config.active_record.auto_explain_threshold_in_seconds = 0.5
+
   # Disable automatic flushing of the log to improve performance.
   # config.autoflush_log = false
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
-  
-  #Added this to stop this message '[deprecated] I18n.enforce_available_locales 
-  #will default to true in the future. If you really want to skip validation 
-  #of your locale you can set I18n.enforce_available_locales = false to avoid this message.'
-  #config.i18n.enforce_available_locales = false
-
-  #For Paperclip to work with Amazon S3
-  config.paperclip_defaults = {
-  :storage => :s3,
-  :s3_credentials => {
-    :bucket => ENV['S3_BUCKET_NAME'],
-    :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
-    :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
-  }
-}
 end
