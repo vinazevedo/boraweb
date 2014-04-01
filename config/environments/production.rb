@@ -83,8 +83,8 @@ Boraweb::Application.configure do
   :storage => :s3,
   :s3_credentials => {
     :bucket => ENV['boraweb'],
-    :access_key_id => ENV['AKIAJXIM7I7ASC2U44DQ'],
-    :secret_access_key => ENV['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']
+    :access_key_id => ENV['AKIAISQX7OKR6VZEAMSQ'],
+    :secret_access_key => ENV['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']
   }
 }
 end
