@@ -77,6 +77,11 @@ Boraweb::Application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
+  
+  #Added this to stop this message '[deprecated] I18n.enforce_available_locales 
+  #will default to true in the future. If you really want to skip validation 
+  #of your locale you can set I18n.enforce_available_locales = false to avoid this message.'
+  config.i18n.enforce_available_locales = false
 
   #For Paperclip to work with Amazon S3
   config.paperclip_defaults = {
