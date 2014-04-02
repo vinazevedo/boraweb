@@ -2,8 +2,8 @@
 <br>
 	
 	<div class="row">
-			<div class="col-md-offset-4 col-md-8">
-				<div class="box panel panel-default">
+			<div class="col-md-offset-2 col-md-8">
+				<div class="panel panel-default">
 					<div id="show-user" align="center" class="panel-footer">
 			  			<div align="left">	
 			  				<span id="user-gliph-footer" class="glyphicon glyphicon-user"></span>
@@ -20,8 +20,11 @@
 						<% end %>
 					</div>
 
-			  	<%= image_tag @idea.image.url(:medium) %>
+			  	
 			  	<div align="center">
+			  		<%= image_tag @idea.image.url(:medium) %>
+			  		<br>
+			  		<br>
 				  	<div class="btn-group">
 					  	<button id="idea-details" type="button" class="btn btn-default"><span class="glyphicon glyphicon-map-marker"></span></button>
 
@@ -34,7 +37,10 @@
 					  	<button id="idea-details" type="button" class="btn btn-default"><span class="glyphicon glyphicon-info-sign"></span></button>
 
 					  	<button id="idea-details" type="button" class="btn btn-default"><span class="glyphicon glyphicon-share"></span></button>
+
 						</div>
+						<br>
+					  	<br>
 					</div>
 				</div>
 			</div>
@@ -42,12 +48,14 @@
 
 
 <div align="center">
-  <h3>Bora?</h3>
-  <br>
+  <h4><strong>Bora?</strong></h4>
+  
   <div class="btn-group">
-  	<button id="sim" type="button" class="btn btn-success">Sim <br><span class="glyphicon glyphicon-ok"></span></button>
+  	<button id="sim" type="button" class="btn btn-success">Partiu <br><span class="glyphicon glyphicon-ok"></span></button>
   	<button id="talvez" type="button" class="btn btn-default">Talvez <br><span class="glyphicon glyphicon-minus"></span></button>
-  	<button id="nao" type="button" class="btn btn-danger">Não dá <br><span class="glyphicon glyphicon-remove"></span></button>
+  	<button id="nao" type="button" class="btn btn-danger">Nem dá <br><span class="glyphicon glyphicon-remove"></span></button>
 	</div>
 </div>
+<br>
+<br>
 
