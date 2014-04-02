@@ -1,19 +1,15 @@
 <div class="center">
+  <br>
   <h1>Ideias recentes</h1>
 </div>  
 
 <div id="ideas" class="transitions-enabled">
   <% @ideas.each do |idea| %>
     <div class="box panel panel-default">
-      <%= image_tag idea.image.url(:thumb) %>
+      <%= link_to image_tag(idea.image.url(:medium)), idea %>
       <div class="panel-body">
-        <%= idea.description %>
-        <%= idea.user.name %>
-        <%= link_to 'Ver', idea %>
-        <% if idea.user == current_user %>
-          <%= link_to 'Editar', edit_idea_path(idea) %>
-          <%= link_to 'Apagar', idea, method: :delete, data: { confirm: 'Tem certeza que quer apagar sua ideia?' } %>
-        <% end %>
+        <h4><%= link_to idea.description, idea %></h4>
+        criado por <%= link_to idea.user.full_name %>
       </div>
     </div>
   <% end %>

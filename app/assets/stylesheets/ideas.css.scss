@@ -3,14 +3,20 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 #ideas {
-	margin: 0 auto;
+	position: absolute;
+	margin: 0 auto; /*set to a negative number 1/2 of your height*/
 }
 
 .box {
-	margin: 5px;
-	width: 214px;
+	margin: 20px;
+	width: 330px;
 }
 
 .box img {
 	width: 100%;
+}
+
+#show-user {
+	width: 100%;
+	top: 100%;
 }

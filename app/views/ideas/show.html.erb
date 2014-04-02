@@ -1,12 +1,37 @@
+<strong><%= link_to 'Voltar', ideas_path %></strong> 
+<br>
+	
+	<div class="row">
+		<div class="col-md-offset-4 col-md-8">
+			<div class="box panel panel-default">
+				<div id="show-user" align="center" class="panel-footer">
+		  			<div align="left">	
+		  				<span id="user-gliph-footer" class="glyphicon glyphicon-user"></span>
+		  				<%= link_to @idea.user.full_name %>
+		  			</div>
+		  	</div>
+				<div class="panel-body center">
+					
+					<h2><%= @idea.description %></h2>
+					<% if @idea.user == current_user %>
+						
+							<%= link_to 'Editar ideia', edit_idea_path(@idea) %>
+					
+					<% end %>
+				</div>
 
-<p>
-  <strong>Bora:</strong>
-  <%= image_tag @idea.image.url(:medium) %>
-  <%= @idea.description %>
-</p>
+		  	<%= image_tag @idea.image.url(:medium) %>
+			</div>
+		</div>
+	</div>
 
-<% if @idea.user == current_user %>
-	<%= link_to 'Editar', edit_idea_path(@idea) %> |
-<% end %>
+<div align="center">
+  <h3>Bora?</h3>
+  <br>
+  <div class="btn-group">
+  	<button id="sim" type="button" class="btn btn-success">Sim <br><span class="glyphicon glyphicon-ok"></span></button>
+  	<button id="talvez" type="button" class="btn btn-default">Talvez <br><span class="glyphicon glyphicon-minus"></span></button>
+  	<button id="não" type="button" class="btn btn-danger">Não dá <br><span class="glyphicon glyphicon-remove"></span></button>
+	</div>
+</div>
 
-	<%= link_to 'Voltar', ideas_path %>

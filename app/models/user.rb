@@ -5,4 +5,14 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :ideas
+
+  def full_name
+  [name, surname].join(' ')
+	end
+
+	def full_name=(name)
+  elements = name.split(' ')
+  self.surname = elements.delete(elements.last)
+  self.name = elements.join(" ")
+	end
 end
