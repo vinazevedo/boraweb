@@ -13,10 +13,17 @@
 }
 
 .box img {
-	width: 100%;
+	max-width: 100%;
+	height: auto;
 }
 
 #show-user {
 	width: 100%;
 	top: 100%;
+}
+
+#show-img img {
+	max-width: 100%;
+	height: auto;
+	width: auto\9; /* ie8 */
 }

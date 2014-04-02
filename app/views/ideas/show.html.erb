@@ -1,5 +1,6 @@
 <strong><%= link_to 'Voltar', ideas_path %></strong> 
 <br>
+<br>
 	
 	<div class="row">
 			<div class="col-md-offset-2 col-md-8">
@@ -21,8 +22,8 @@
 					</div>
 
 			  	
-			  	<div align="center">
-			  		<%= image_tag @idea.image.url(:medium) %>
+			  	<div id="show-img" align="center" class="img-responsive">
+			  		<%= image_tag @idea.image.url(:medium)%>
 			  		<br>
 			  		<br>
 				  	<div class="btn-group">
@@ -40,7 +41,7 @@
 
 						</div>
 						<br>
-					  	<br>
+					  <br>
 					</div>
 				</div>
 			</div>
