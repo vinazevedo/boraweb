@@ -135,13 +135,27 @@ span.glyphicon-cog {
 }
 
 #sim {
-    color: white;
-    background-color: #2e5e8e;
-    border-color: #2e5e8e;
+    color: #0bba00;
+    background-color: white;
+    border-color: #0bba00;
 }
 
 #talvez {
-    color: white;
-    background-color: #585858;
-    border-color: #585858;
+    color: #2e5e8e;
+    background-color: white;
+    border-color: #2e5e8e;
+}
+
+#nao {
+    color: #ea0606;
+    background-color: white;
+    border-color: #ea0606;
+}
+
+#idea-details {
+    background-color: white;
+    border-color: white;
+    color: #2e5e8e;
+    font-size: 1.8em;
+    z-index: 1000;
 }
