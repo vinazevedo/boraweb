@@ -6,9 +6,20 @@
 			<div class="col-md-offset-2 col-md-8">
 				<div class="panel panel-default">
 					<div id="show-user" align="center" class="panel-footer">
-			  			<div align="left">	
-			  				<span id="user-gliph-footer" class="glyphicon glyphicon-user"></span>
-			  				<%= link_to @idea.user.full_name %>
+			  			<div style="width: 100%; display: table;">	
+			  				<div style="display: table-row">
+        					<div align="left" style="display: table-cell;"> 
+        						<span id="user-gliph-footer" class="glyphicon glyphicon-user"></span>
+			  							<%= link_to @idea.user.full_name %> 
+			  					</div>
+			  					<% if current_user == @idea.user %>
+	        					<div align="right" style="display: table-cell;"> 
+	        						<%= link_to @idea, method: :delete, data: { confirm: 'Tem certeza que deseja apagar sua ideia?' } do %>
+				  							<span id="trash-gliph-footer" class="glyphicon glyphicon-trash"></span>
+				  						<% end %> 
+				  					</div>
+				  				<% end %>	
+			  				</div>
 			  			</div>
 			  	</div>
 					<div class="panel-body center">
@@ -59,4 +70,3 @@
 </div>
 <br>
 <br>
-

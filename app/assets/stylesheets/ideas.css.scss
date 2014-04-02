@@ -17,6 +17,38 @@
 	height: auto;
 }
 
+#user-gliph-footer {
+    font-size: 1.1em;
+    z-index: 10000;
+    color: #2e5e8e;
+}
+
+#sim {
+    color: #0bba00;
+    background-color: white;
+    border-color: #0bba00;
+}
+
+#talvez {
+    color: #2e5e8e;
+    background-color: white;
+    border-color: #2e5e8e;
+}
+
+#nao {
+    color: #ea0606;
+    background-color: white;
+    border-color: #ea0606;
+}
+
+#idea-details {
+    background-color: white;
+    border-color: white;
+    color: #2e5e8e;
+    font-size: 1.8em;
+    z-index: 1000;
+}
+
 #show-user {
 	width: 100%;
 	top: 100%;
@@ -26,4 +58,10 @@
 	max-width: 100%;
 	height: auto;
 	width: auto\9; /* ie8 */
+}
+
+#trash-gliph-footer {
+		font-size: 1.1em;
+    z-index: 1000;
+    color: #c0392b;
 }
