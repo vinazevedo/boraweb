@@ -1,16 +1,20 @@
-<div class="center">
-  <br>
-  <h1>Ideias recentes</h1>
-</div>  
+<%= render 'pages/home' if !user_signed_in? %>
 
-<div id="ideas" class="transitions-enabled">
-  <% @ideas.each do |idea| %>
-    <div class="box panel panel-default">
-      <%= link_to image_tag(idea.image.url(:medium)), idea %>
-      <div class="panel-body">
-        <h4><%= link_to idea.description, idea %></h4>
-        criado por <%= link_to idea.user.full_name %>
-      </div>
+<% if user_signed_in? %>
+    <div class="center">
+      <br>
+      <h1>Ideias recentes</h1>
+    </div>  
+
+    <div id="ideas" class="transitions-enabled">
+      <% @ideas.each do |idea| %>
+        <div class="box panel panel-default">
+          <%= link_to image_tag(idea.image.url(:medium)), idea %>
+          <div class="panel-body">
+            <h4><%= link_to idea.description, idea %></h4>
+            criado por <%= link_to idea.user.full_name %>
+          </div>
+        </div>
+      <% end %>
     </div>
-  <% end %>
-</div>
+<% end %>
