@@ -4,13 +4,12 @@
 
 #ideas {
 	position: absolute;
-	margin: 0 auto;
-    text-align: center;
+	margin: 0 auto; /*set to a negative number 1/2 of your height*/
 }
 
 .box {
 	margin: 10px;
-	width: 300px;
+	width: 280px;
 }
 
 .box img {
