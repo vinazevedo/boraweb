@@ -23,36 +23,37 @@
       <ul class="nav navbar-nav navbar-right">
         <% if user_signed_in? %>
 
-          <li>
-            <%= link_to new_idea_path do %>
-              <span class="glyphicon glyphicon-plus"></span>
-            <% end %>
-          </li>
 
-
-          <li>
+          <li id="inicio-nav">
             <%= link_to ideas_path do %>
-              <span class="glyphicon glyphicon-home"></span>
+              <span class="glyphicon glyphicon-home"></span> &nbsp Início
             <% end %>
           </li>
 
 
-          <li>
+          <li id="bora-nav">
+            <%= link_to new_idea_path do %>
+              <span class="glyphicon glyphicon-plus"></span> &nbsp Bora
+            <% end %>
+          </li>
+
+
+          <li id="calendario-nav">
             <%= link_to about_path do %>
-              <span class="glyphicon glyphicon-calendar"></span>
+              <span class="glyphicon glyphicon-calendar"></span> &nbsp Calendário
             <% end %>
           </li>
 
 
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-list"></span> 
+          <li id="notif-nav" class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-list"></span> &nbsp Notificações
           <ul class="dropdown-menu">
             <li><%= link_to "Atualizações", about_path %></li>
           </ul>
 
 
-          <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-cog"></span><b class="caret"></b></a>
+          <li id="conta-nav" class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-cog"></span>&nbsp Conta<b class="caret"></b></a>
           <ul class="dropdown-menu">
             <li><%= link_to "Configurações da conta", edit_user_registration_path %></li>
             <li><a href="#">Ajuda</a></li>

@@ -128,3 +128,42 @@ span.glyphicon-cog {
     z-index: 1000;
 }
 
+#inicio-nav {
+    &:hover,
+    &:focus {
+      color: #202d3b;
+      background-color: #202d3b;
+  }
+}
+
+#bora-nav {
+    &:hover,
+    &:focus {
+      color: #202d3b;
+      background-color: #202d3b;
+  }
+}
+
+#calendario-nav {
+    &:hover,
+    &:focus {
+      color: #202d3b;
+      background-color: #202d3b;
+  }
+}
+
+#notif-nav {
+    &:hover,
+    &:focus {
+      color: #202d3b;
+      background-color: #202d3b;
+  }
+}
+
+#conta-nav {
+    &:hover,
+    &:focus {
+      color: #202d3b;
+      background-color: #202d3b;
+  }
+}
