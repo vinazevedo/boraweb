@@ -14,20 +14,22 @@
           <div id="show-user-index" align="center" class="panel-title">
               <div style="width: 100%; display: table;">  
                 <div style="display: table-row">
-                  <div align="left" style="display: table-cell;"> 
+                  <div id="index-user-name" align="left" style="display: table-cell;"> 
                     <span id="user-gliph-footer" class="glyphicon glyphicon-user"></span>
                       <%= link_to idea.user.full_name %>
                   </div>
-                  <div id="post-time" align="right" style="display: table-cell;">
+                  <div id="index-post-time" align="right" style="display: table-cell;">
                     <span class="glyphicon glyphicon-time"></span>
                     <%= time_ago_in_words(idea.created_at) %>
                   </div>
                 </div>
               </div>
           </div>
-            <div id="header-line-div">
+
+          <div id="header-line-div">
               <hr id="header-line">
-            </div>
+          </div>
+
           <div id="index-idea-img">
             <%= link_to image_tag(idea.image.url(:medium)), idea %>
           </div>
@@ -35,9 +37,13 @@
           <div id="header-line-div">
               <hr id="header-line">
           </div>
-          
+
           <div id="idea-wrapper" class="panel-body">
             <h3 id="idea-title"><%= link_to idea.description, idea %></h3>
+            <br>
+            <div>
+              às (horário marcado)
+            </div>
           </div>
         </div>
       <% end %>

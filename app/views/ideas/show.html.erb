@@ -9,11 +9,18 @@
 					<div id="show-user" align="center" class="panel-title">
 			  			<div style="width: 100%; display: table;">	
 			  				<div style="display: table-row">
-        					<div align="left" style="display: table-cell;"> 
+        					<div id="show-user-name" align="left" style="display: table-cell;"> 
         						<span id="user-gliph-footer" class="glyphicon glyphicon-user"></span>
-			  							<%= link_to @idea.user.full_name %> &nbsp (<%= time_ago_in_words(@idea.created_at) %>)
+			  							<%= link_to @idea.user.full_name %>
 			  					</div>
-			  			
+
+			  					<div id="show-post-time" style="float: right;">
+			  								<span class="glyphicon glyphicon-time"></span>
+			  								<%= time_ago_in_words(@idea.created_at) %>
+			  					</div>
+
+			  					
+
 			  					<% if current_user == @idea.user %>
 	        					<div align="right" style="display: table-cell;"> 
 	        						<%= link_to @idea, method: :delete, data: { confirm: 'Tem certeza que deseja apagar sua ideia?' } do %>
