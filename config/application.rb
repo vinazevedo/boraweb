@@ -22,5 +22,7 @@ module Boraweb
 
     #Required for Heroku.
     config.assets.initialize_on_precompile = false
+
+    config.i18n.default_locale = "pt-BR"
   end
 end

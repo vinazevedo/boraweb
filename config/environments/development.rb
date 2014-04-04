@@ -30,4 +30,6 @@ Boraweb::Application.configure do
   #Required for Heroku.
   #Set this to your actual host (ex.: ninhodev.com)!!!!!!!!!!!!!!!!!!!!!!
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+
+  config.i18n.default_locale = "pt-BR"
 end

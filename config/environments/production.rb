@@ -92,4 +92,7 @@ Boraweb::Application.configure do
     :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
   }
 }
+
+config.i18n.default_locale = "pt-BR"
+
 end
