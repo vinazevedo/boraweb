@@ -9,19 +9,19 @@
     <div id="ideas" class="transitions-enabled">
       <% @ideas.each do |idea| %>
         <div id="index-wrapper" class="box panel panel-default">
-          <div id="show-user" align="center" class="panel-footer">
+          <div id="show-user" align="center" class="panel-title">
               <div style="width: 100%; display: table;">  
                 <div style="display: table-row">
                   <div align="left" style="display: table-cell;"> 
                     <span id="user-gliph-footer" class="glyphicon glyphicon-user"></span>
-                      <%= link_to idea.user.full_name %> 
+                      <%= link_to idea.user.full_name %>
                   </div>
                 </div>
               </div>
           </div>
           <%= link_to image_tag(idea.image.url(:medium)), idea %>
-          <div class="panel-body">
-            <h3><%= link_to idea.description, idea %></h3>
+          <div id="idea-wrapper" class="panel-body">
+            <h3 id="idea-title"><%= link_to idea.description, idea %></h3>
           </div>
         </div>
       <% end %>

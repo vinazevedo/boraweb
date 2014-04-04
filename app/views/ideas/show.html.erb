@@ -2,17 +2,16 @@
 <strong><%= link_to 'Voltar', ideas_path %></strong> 
 </div>
 <br>
-<br>
 	
 	<div class="row">
 			<div class="col-md-offset-2 col-md-8">
 				<div id="show-wrapper" class="panel panel-default">
-					<div id="show-user" align="center" class="panel-footer">
+					<div id="show-user" align="center" class="panel-title">
 			  			<div style="width: 100%; display: table;">	
 			  				<div style="display: table-row">
         					<div align="left" style="display: table-cell;"> 
         						<span id="user-gliph-footer" class="glyphicon glyphicon-user"></span>
-			  							<%= link_to @idea.user.full_name %> 
+			  							<%= link_to @idea.user.full_name %>
 			  					</div>
 			  					<% if current_user == @idea.user %>
 	        					<div align="right" style="display: table-cell;"> 
@@ -24,19 +23,22 @@
 			  				</div>
 			  			</div>
 			  	</div>
-					<div class="panel-body center">
+			  	<br>
+					<div id="idea-title" class="panel-body center">
 						
 						<h2><%= @idea.description %></h2>
 						<% if @idea.user == current_user %>
 							
-								<%= link_to 'Editar ideia', edit_idea_path(@idea) %>
-						
+								<p><%= link_to 'Editar ideia', edit_idea_path(@idea) %></p>
+		
 						<% end %>
 					</div>
+					<br>
 
 			  	
 			  	<div id="show-img" align="center" class="img-responsive">
 			  		<%= image_tag @idea.image.url(:medium)%>
+			  		<br>
 			  		<br>
 			  		<br>
 				  	<div class="btn-group">
