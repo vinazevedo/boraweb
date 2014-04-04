@@ -6,6 +6,7 @@
 	position: absolute;
 	margin: 0 auto;
     text-align: center;
+    text-decoration: none;
 }
 
 .box {
@@ -62,7 +63,11 @@
 }
 
 #trash-gliph-footer {
-		font-size: 1.1em;
+	font-size: 1.1em;
     z-index: 1000;
     color: #c0392b;
+}
+
+#show-wrapper {
+    text-decoration: none;
 }
