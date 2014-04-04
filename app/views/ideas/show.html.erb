@@ -32,15 +32,17 @@
 			  			</div>
 			  	</div>
 			  	
-			  	  <div id="header-line-div">
-              <hr id="header-line">
+			  	  <div id="header-line-div-show">
+              <hr id="header-line-show">
             </div>
 
 			  	<br>
 			  	<br>
 					<div id="idea-title" class="panel-body center">
 						
-						<h2><%= @idea.description %></h2>
+						<strong><h1><%= @idea.description %></h1></strong>
+						<p class="lead"><%= @idea.lead %></p>
+
 						<% if @idea.user == current_user %>
 							
 								<p><%= link_to 'Editar ideia', edit_idea_path(@idea) %></p>
