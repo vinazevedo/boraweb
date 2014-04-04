@@ -61,6 +61,16 @@
     z-index: 1000;
 }
 
+#show-user-index {
+    position: relative;
+    font-size: 14px;
+    width: 100%;
+    top: 100%;
+    padding: 10px 15px;
+    background-color: #fbfcfc;
+    z-index: 1000;
+}
+
 #show-img img {
 	max-width: 100%;
 	height: auto;
@@ -119,4 +129,9 @@ border-width: 1px; }
 #idea-wrapper {
     position: relative;
     z-index: 1000;
+}
+
+#post-time {
+    font-size: 0.8em;
+    color: #a7a7a7;
 }

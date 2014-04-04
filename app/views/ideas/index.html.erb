@@ -11,12 +11,16 @@
     <div id="ideas" class="transitions-enabled">
       <% @ideas.each do |idea| %>
         <div id="index-wrapper" class="box panel panel-default">
-          <div id="show-user" align="center" class="panel-title">
+          <div id="show-user-index" align="center" class="panel-title">
               <div style="width: 100%; display: table;">  
                 <div style="display: table-row">
                   <div align="left" style="display: table-cell;"> 
                     <span id="user-gliph-footer" class="glyphicon glyphicon-user"></span>
-                      <%= link_to idea.user.full_name %> &nbsp (<%= time_ago_in_words(idea.created_at) %>)
+                      <%= link_to idea.user.full_name %>
+                  </div>
+                  <div id="post-time" align="right" style="display: table-cell;">
+                    <span class="glyphicon glyphicon-time"></span>
+                    <%= time_ago_in_words(idea.created_at) %>
                   </div>
                 </div>
               </div>
