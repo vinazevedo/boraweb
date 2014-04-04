@@ -16,12 +16,22 @@
                 <div style="display: table-row">
                   <div align="left" style="display: table-cell;"> 
                     <span id="user-gliph-footer" class="glyphicon glyphicon-user"></span>
-                      <%= link_to idea.user.full_name %>
+                      <%= link_to idea.user.full_name %> &nbsp (<%= time_ago_in_words(idea.created_at) %>)
                   </div>
                 </div>
               </div>
           </div>
-          <%= link_to image_tag(idea.image.url(:medium)), idea %>
+            <div id="header-line-div">
+              <hr id="header-line">
+            </div>
+          <div id="index-idea-img">
+            <%= link_to image_tag(idea.image.url(:medium)), idea %>
+          </div>
+
+          <div id="header-line-div">
+              <hr id="header-line">
+          </div>
+          
           <div id="idea-wrapper" class="panel-body">
             <h3 id="idea-title"><%= link_to idea.description, idea %></h3>
           </div>

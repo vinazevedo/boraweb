@@ -52,11 +52,13 @@
 }
 
 #show-user {
+    position: relative;
     font-size: 14px;
     width: 100%;
 	top: 100%;
     padding: 10px 15px;
     background-color: #fbfcfc;
+    z-index: 1000;
 }
 
 #show-img img {
@@ -90,4 +92,31 @@
 
 #idea-title {
     padding: 0px;
+}
+
+#header-line-div {
+    position: relative;
+    z-index: 2;
+}
+
+#header-line {
+    position: relative;
+    border: 0;
+    height: 0;
+    box-shadow: 0 0 14px 2px black;
+}
+
+#index-idea-img {
+    position: relative;
+    z-index: 0;
+}
+
+hr {
+display: block;
+margin: 0.0em;
+border-width: 1px; }
+
+#idea-wrapper {
+    position: relative;
+    z-index: 1000;
 }

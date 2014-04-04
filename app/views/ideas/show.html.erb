@@ -11,7 +11,7 @@
 			  				<div style="display: table-row">
         					<div align="left" style="display: table-cell;"> 
         						<span id="user-gliph-footer" class="glyphicon glyphicon-user"></span>
-			  							<%= link_to @idea.user.full_name %> &nbsp (há <%= time_ago_in_words(@idea.created_at) %>)
+			  							<%= link_to @idea.user.full_name %> &nbsp (<%= time_ago_in_words(@idea.created_at) %>)
 			  					</div>
 			  			
 			  					<% if current_user == @idea.user %>
@@ -24,6 +24,12 @@
 			  				</div>
 			  			</div>
 			  	</div>
+			  	
+			  	  <div id="header-line-div">
+              <hr id="header-line">
+            </div>
+
+			  	<br>
 			  	<br>
 					<div id="idea-title" class="panel-body center">
 						
