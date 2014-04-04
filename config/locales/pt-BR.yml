@@ -55,38 +55,38 @@ pt-BR:
   datetime:
     distance_in_words:
       about_x_hours:
-        one: 1 hora
-        other: há %{count} horas
+        one: hora atrás
+        other: ! '%{count} horas atrás'
       about_x_months:
-        one: há aprox. 1 mês
-        other: há aprox. %{count} meses
+        one: 1 mês atrás
+        other: ! '%{count} meses atrás'
       about_x_years:
-        one: há aprox. 1 ano
-        other: há aprox. %{count} anos
+        one: aprox. 1 ano
+        other: ! '%{count} anos atrás'
       almost_x_years:
-        one: há quase 1 ano
-        other: há quase %{count} anos
-      half_a_minute: há meio minuto
+        one: quase 1 ano atrás
+        other: quase %{count} anos atrás
+      half_a_minute: a meio minuto
       less_than_x_minutes:
-        one: há menos de um minuto
-        other: menos de %{count} minutos
+        one: menos de um minuto
+        other: a menos de %{count} minutos
       less_than_x_seconds:
-        one: há menos de 1 segundo
-        other: há menos de %{count} segundos
+        one: menos de 1 segundo
+        other: a menos de %{count} segundos
       over_x_years:
-        one: há mais de 1 ano
-        other: há mais de %{count} anos
+        one: mais de 1 ano
+        other: mais de %{count} anos
       x_days:
-        one: 1 dia
-        other: ! '%{count} dias'
+        one: a 1 dia
+        other: ! '%{count} dias atrás'
       x_minutes:
-        one: 1 minuto
+        one: a 1 minuto
         other: ! '%{count} minutos'
       x_months:
-        one: 1 mês
+        one: a 1 mês
         other: ! '%{count} meses'
       x_seconds:
-        one: 1 segundo
+        one: a 1 segundo
         other: ! '%{count} segundos'
     prompts:
       day: Dia
