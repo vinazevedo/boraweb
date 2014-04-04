@@ -32,15 +32,7 @@
 								<p><%= link_to 'Editar ideia', edit_idea_path(@idea) %></p>
 		
 						<% end %>
-					</div>
-					<br>
-
-			  	
-			  	<div id="show-img" align="center" class="img-responsive">
-			  		<%= image_tag @idea.image.url(:medium)%>
-			  		<br>
-			  		<br>
-			  		<br>
+						<br>
 				  	<div class="btn-group">
 					  	<button id="idea-details" type="button" class="btn btn-default"><span class="glyphicon glyphicon-map-marker"></span></button>
 
@@ -50,12 +42,17 @@
 
 					  	<button id="idea-details" type="button" class="btn btn-default"><span class="glyphicon glyphicon-heart"></span></button>
 
-					  	<button id="idea-details" type="button" class="btn btn-default"><span class="glyphicon glyphicon-info-sign"></span></button>
-
 					  	<button id="idea-details" type="button" class="btn btn-default"><span class="glyphicon glyphicon-share"></span></button>
 
 						</div>
 						<br>
+					</div>
+			  	
+			  	<div id="show-img" align="center" class="img-responsive">
+			  		<%= image_tag @idea.image.url(:medium)%>
+			  		<br>
+			  		<br>
+			  		<button id="idea-details" type="button" class="btn btn-default"><span class="glyphicon glyphicon-info-sign"></span></button>
 					  <br>
 					</div>
 				</div>
