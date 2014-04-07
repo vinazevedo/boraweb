@@ -5,4 +5,5 @@ class Idea < ActiveRecord::Base
 		thumb: "210x210>" 
 	}
 
+
 end
