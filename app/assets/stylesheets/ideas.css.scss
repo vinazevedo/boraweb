@@ -105,7 +105,6 @@
 }
 
 #idea-title {
-    margin-top: 10px;
     padding: 0px;
     color: #2c3e50;
 }
@@ -170,11 +169,10 @@ border-width: 1px; }
 #idea-time-set p {
     font-size: 16px;
     margin-left: -25px;
-    padding-top: 2px;
+    padding-top: 5px;
     vertical-align: center;
     float: center;
     height: 0px;
-    color: #545454;
 }
 
 #glyph-calendar-index {
@@ -183,9 +181,5 @@ border-width: 1px; }
     color: #95a5a6;
     margin-left: 10px;
 
-}
-
-#event_datetime_show p {
-    font-size: 14px;
 }
 
