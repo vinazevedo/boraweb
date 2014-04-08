@@ -38,6 +38,9 @@
 
 			  	<br>
 			  	<br>
+			  	<div id="event_datetime_show" class="center">
+			  		<span id="glyph-calendar-index" class="glyphicon glyphicon-calendar"></span> <p><%= @idea.event_time.try(:strftime, '%d/%m/%Y, às %H:%Mh') %></p>
+			  	</div>
 					<div id="idea-title" class="panel-body center">
 						
 						<strong><h1><%= @idea.description %></h1></strong>
