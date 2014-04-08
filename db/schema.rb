@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140405052725) do
+ActiveRecord::Schema.define(version: 20140404211405) do
 
   create_table "ideas", force: true do |t|
     t.string   "description"
@@ -23,10 +23,8 @@ ActiveRecord::Schema.define(version: 20140405052725) do
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
     t.string   "lead"
-    t.datetime "event_time"
   end
 
-  add_index "ideas", ["event_time"], name: "index_ideas_on_event_time"
   add_index "ideas", ["user_id"], name: "index_ideas_on_user_id"
 
   create_table "users", force: true do |t|
