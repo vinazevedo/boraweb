@@ -40,7 +40,20 @@
 			  	<br>
 
 			  	<div id="event_datetime_show" class="center">
-			  		<span id="glyph-calendar-index" class="glyphicon glyphicon-calendar"></span> <p><%= @idea.event_time.try(:strftime, '%d/%m/%Y, às %H:%Mh') %></p>
+			  		<div class="calendar">
+			  			<span id="glyph-calendar-index" class="glyphicon glyphicon-calendar"></span>
+			  		</div>
+			  		<div class="ok">
+			  			<span class="glyphicon glyphicon-ok"></span>
+			  		</div>
+			  		<div class="talvez">
+			  			<span class="glyphicon glyphicon-minus"></span>
+			  		</div>
+			  		<div class="remove">
+			  			<span class="glyphicon glyphicon-remove"></span>
+			  		</div>
+
+			  		<p><%= @idea.event_time.try(:strftime, '%d/%m/%Y, às %H:%Mh') %></p>
 			  	</div>
 
 					<div id="idea-title" class="panel-body center">
@@ -85,9 +98,9 @@
   <h4><strong>Bora?</strong></h4>
   
   <div class="btn-group">
-  	<button id="sim" type="button" class="btn btn-success">Partiu <br><span class="glyphicon glyphicon-ok"></span></button>
-  	<button id="talvez" type="button" class="btn btn-default">Talvez <br><span class="glyphicon glyphicon-minus"></span></button>
-  	<button id="nao" type="button" class="btn btn-danger">Nem dá <br><span class="glyphicon glyphicon-remove"></span></button>
+  	<button id="partiu-btn" type="button" class="btn btn-success">Partiu <br><span class="glyphicon glyphicon-ok"></span></button>
+  	<button id="talvez-btn" type="button" class="btn btn-default">Talvez <br><span class="glyphicon glyphicon-minus"></span></button>
+  	<button id="nemda-btn" type="button" class="btn btn-danger">Nem dá <br><span class="glyphicon glyphicon-remove"></span></button>
 	</div>
 </div>
 <br>

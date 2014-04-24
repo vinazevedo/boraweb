@@ -4,6 +4,7 @@ Boraweb::Application.routes.draw do
   devise_for :users
   root "ideas#index"
   get "about" => "pages#about"
+  get "index2" => "ideas#index2"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

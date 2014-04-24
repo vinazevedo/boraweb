@@ -7,6 +7,10 @@ class IdeasController < ApplicationController
     @ideas = Idea.all.order("created_at DESC")
   end
 
+  def index2
+    @ideastime = Idea.all.order("event_time DESC")
+  end
+
   def show
   end
 
