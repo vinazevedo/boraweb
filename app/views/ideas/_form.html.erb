@@ -29,15 +29,8 @@
 <br>
 
   <div class="form-group">
-    <%= f.label :event_time, "Data: "%> &nbsp
-    <%= f.date_select :event_time, class: "form-control" %>
-  </div>
-
-  <br>
-
-  <div class="form-group">
-    <%= f.label :event_time, "Horário: "%> &nbsp
-    <%= f.time_select :event_time, class: "form-control" %>
+    <%= f.label :event_time, "Quando? "%> &nbsp
+    <%= f.datetime_select :event_time, class: "form-control" %>
   </div>
 
   <br>
