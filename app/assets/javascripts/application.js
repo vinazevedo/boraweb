@@ -13,7 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery.ui.all
-//= require gmaps-autocomplete
 //= require bootstrap
 //= require jquery.turbolinks
 //= require turbolinks

@@ -10,7 +10,7 @@ gem 'turbolinks'
 gem 'jquery-turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'bootstrap-sass'
-gem 'gmaps-autocomplete-rails'
+gem 'gmaps4rails'
 gem 'devise', :path => "vendor/gems/devise-3.1.2"
 gem 'paperclip', '~> 3.0'
 gem 'aws-sdk', '~> 1.20.0'
