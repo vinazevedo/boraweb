@@ -23,8 +23,8 @@ ActiveRecord::Schema.define(version: 20140425073345) do
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
     t.string   "lead"
-    t.datetime "event_time"
     t.string   "location"
+    t.datetime "event_time"
   end
 
   add_index "ideas", ["event_time"], name: "index_ideas_on_event_time"
