@@ -2,7 +2,7 @@
 <strong><%= link_to 'Voltar', ideas_path %></strong> 
 </div>
 <br>
-	
+
 	<div class="row">
 			<div class="col-md-offset-2 col-md-8">
 				<div id="show-wrapper" class="panel panel-default">
@@ -83,10 +83,12 @@
 					</div>
 			  	
 			  	<div id="show-img" align="center" class="img-responsive">
+			  		<div id="mapa" style="height: 500px; width: 500px">
 			  		<%= image_tag @idea.image.url(:medium)%>
 			  		<br>
 			  		<br>
-			  		<button id="idea-details" type="button" class="btn btn-default"><span class="glyphicon glyphicon-info-sign"></span></button>
+			  	</div>
+			  	<button id="idea-details" type="button" class="btn btn-default"><span class="glyphicon glyphicon-info-sign"></span></button>
 					  <br>
 					</div>
 				</div>

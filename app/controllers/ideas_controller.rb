@@ -59,6 +59,6 @@ class IdeasController < ApplicationController
     end
 
     def idea_params
-      params.require(:idea).permit(:description, :image, :lead, :event_time)
+      params.require(:idea).permit(:description, :image, :lead, :event_time, :place, :address, :lat, :lng)
     end
 end

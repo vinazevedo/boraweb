@@ -15,4 +15,6 @@ class User < ActiveRecord::Base
   self.surname = elements.delete(elements.last)
   self.name = elements.join(" ")
 	end
+
+  
 end
