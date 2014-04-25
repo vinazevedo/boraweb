@@ -33,14 +33,14 @@
     <%= f.datetime_select :event_time, class: "form-control" %>
   </div>
 
-  <br>
+
   <div class="form-group">
-    <%= f.label :location, "Onde? "%> &nbsp
-    <%= f.text_field :location, class: "form-control" %>
-    <br>
-    <%= render 'map' %>
+  <strong><p>Onde?</p></strong>
+ <div>
+    <%= render 'location_form_autocomplete' %>
   </div>
-  
+
+  <br>
   <br>
 
   <div class="form-group">

@@ -4,5 +4,6 @@ class Idea < ActiveRecord::Base
 		medium: "510x510>", 
 		thumb: "210x210>" 
 	}
-
+	geocoded_by :location
+	after_validation :geocode
 end

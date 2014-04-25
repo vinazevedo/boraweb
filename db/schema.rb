@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140425082717) do
+ActiveRecord::Schema.define(version: 20140425192333) do
 
   create_table "ideas", force: true do |t|
     t.string   "description"
@@ -25,6 +25,8 @@ ActiveRecord::Schema.define(version: 20140425082717) do
     t.string   "lead"
     t.string   "location"
     t.datetime "event_time"
+    t.float    "latitude"
+    t.float    "longitude"
   end
 
   add_index "ideas", ["event_time"], name: "index_ideas_on_event_time"
