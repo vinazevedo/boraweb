@@ -60,7 +60,6 @@ GEM
     coffee-script-source (1.7.0)
     erubis (2.7.0)
     execjs (2.0.2)
-    gmaps4rails (2.1.2)
     hike (1.2.3)
     i18n (0.6.9)
     jbuilder (1.5.3)
@@ -72,8 +71,6 @@ GEM
     jquery-turbolinks (2.0.2)
       railties (>= 3.1.0)
       turbolinks
-    jquery-ui-rails (4.2.1)
-      railties (>= 3.2.16)
     json (1.8.1)
     mail (2.5.4)
       mime-types (~> 1.16)
@@ -160,11 +157,9 @@ DEPENDENCIES
   bootstrap-sass
   coffee-rails (~> 4.0.0)
   devise!
-  gmaps4rails
   jbuilder (~> 1.2)
   jquery-rails
   jquery-turbolinks
-  jquery-ui-rails
   masonry-rails (~> 0.2.0)
   paperclip (~> 3.0)
   pg
