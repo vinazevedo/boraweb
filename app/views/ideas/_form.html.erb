@@ -34,8 +34,13 @@
   </div>
 
   <br>
-
-  <%= render 'map' %>
+  <div class="form-group">
+    <%= f.label :location, "Onde? "%> &nbsp
+    <%= f.text_field :location, class: "form-control" %>
+    <br>
+    <%= render 'map' %>
+  </div>
+  
   <br>
 
   <div class="form-group">
