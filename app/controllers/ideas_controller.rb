@@ -8,7 +8,7 @@ class IdeasController < ApplicationController
   end
 
   def index2
-    @ideastime = Idea.all.order("event_time DESC")
+    @ideastime = Idea.all.order("event_time ASC")
   end
 
   def show

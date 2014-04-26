@@ -52,6 +52,9 @@
                     </div>
                     <div align="center" style="display: table-cell;">
                       <p><%= idea.event_time.try(:strftime, '%d/%m/%Y, às %H:%Mh') %></p>
+                      <div id="time-until-event-index" align="center" style="display: table-cell;">
+                        <p> (faltam <%=distance_of_time_in_words_to_now(idea.event_time)%>)</p>
+                      </div>
                     </div>
                   </div>
               </div>
