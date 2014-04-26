@@ -69,9 +69,13 @@
 			  	
 			  	<div id="show-img" align="center" class="img-responsive">
 			  		<%= image_tag @idea.image.url(:medium)%>
-			  		<br>
-			  		<br>
-			  		<div class="btn-group">
+					</div>
+
+					<div id="map-img" align="center" class="img-responsive">
+    					<%= image_tag "http://maps.googleapis.com/maps/api/staticmap?center=#{@idea.latitude},#{@idea.longitude}&zoom=13&size=400x200&scale=2&sensor=false" %>
+  				</div>
+
+  				<div class="row" align="center">
 					  	<button id="idea-details" type="button" class="btn btn-default"><span class="glyphicon glyphicon-map-marker"></span></button>
 
 					  	<button id="idea-details" type="button" class="btn btn-default"><span class="glyphicon glyphicon-road"></span></button>
@@ -81,9 +85,8 @@
 					  	<button id="idea-details" type="button" class="btn btn-default"><span class="glyphicon glyphicon-heart"></span></button>
 
 					  	<button id="idea-details" type="button" class="btn btn-default"><span class="glyphicon glyphicon-share"></span></button>
-						</div>
-					  <br>
 					</div>
+				<%= render 'dynamic_map' %>
 				</div>
 			</div>
 	</div>

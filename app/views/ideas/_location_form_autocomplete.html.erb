@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Place Autocomplete Address Form</title>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
     <style>
@@ -70,7 +69,7 @@ function geolocate() {
     navigator.geolocation.getCurrentPosition(function(position) {
       var geolocation = new google.maps.LatLng(
           position.coords.latitude, position.coords.longitude);
-      autocomplete.setBounds(new google.maps.LatLngBounds(-22.909812, -43.181535));
+      autocomplete.setBounds(new google.maps.LatLngBounds(geolocation, geolocation));
     });
   }
 }
