@@ -53,31 +53,19 @@
 						
 						<strong><h1><%= @idea.description %></h1></strong>
 						<p class="lead"><%= @idea.lead %></p>
+						<br>
+
+					</div>
 
 						<br>
 						<div id="event_datetime_show" class="center">
-					  		<div class="calendar">
-					  			<span id="glyph-calendar-index" class="glyphicon glyphicon-calendar"></span>
-					  		</div>
-					  		<div class="ok">
-					  			<span class="glyphicon glyphicon-ok"></span>
-					  		</div>
-					  		<div class="talvez">
-					  			<span class="glyphicon glyphicon-minus"></span>
-					  		</div>
-					  		<div class="remove">
-					  			<span class="glyphicon glyphicon-remove"></span>
+			  			<p><span id="glyph-calendar-index" class="glyphicon glyphicon-calendar"></span>&nbsp&nbsp<%= @idea.event_time.try(:strftime, '%d/%m/%Y, às %H:%Mh') %></p>
 			  		</div>
 
-			  		<p><%= @idea.event_time.try(:strftime, '%d/%m/%Y, às %H:%Mh') %></p>
-			  	</div>
 						<div id="show-location" class="center">
-					  	<p><span id="gliph-map-marker" class="glyphicon glyphicon-map-marker"></span> <br>
-					  	
-					  	<%= @idea.location %></p>
+					  	<p><span id="gliph-map-marker" class="glyphicon glyphicon-map-marker"></span>&nbsp&nbsp<%= @idea.location %></p>
 			  		</div>
 						<br>
-					</div>
 			  	
 			  	<div id="show-img" align="center" class="img-responsive">
 			  		<%= image_tag @idea.image.url(:medium)%>
