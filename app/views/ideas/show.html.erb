@@ -1,13 +1,3 @@
-<html xmlns='http://www.w3.org/1999/xhtml' 
-      xmlns:og='http://ogp.me/ns#'>
-      <meta property='og:title' content='#{<%= @idea.description %>}' />
-			<meta property='og:description' content='#{<%= @idea.lead %>}' />
-			<meta property='og:url' content='http://http://www.boraapp.com' />
-			<meta property='og:image' content='#{<%= image_tag @idea.image.url(:medium)%>}'>
-			<meta property='og:type' content='website' />
-			<meta property='og:site_name' content='Bora' />
-
-
 <div id="fb-root"></div>
 <script>
 	
@@ -114,7 +104,9 @@
 					  	<button id="idea-details" type="button" class="btn btn-default"><span class="glyphicon glyphicon-share"></span></button>
 					</div>
 
+					<div>
 					<%= render 'dynamic_map' %>
+					</div>
 
 					<div data-width="748px" class="fb-comments" data-href="http://boraapp.com/ideas/#" data-numposts="5" data-colorscheme="light"></div>
 
