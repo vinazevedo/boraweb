@@ -1,3 +1,19 @@
+<div id="fb-root"></div>
+<script>
+	
+	$(window).resize(function(){$('.fb-comments iframe,.fb-comments span:first-child').css({'width':$('#commentboxcontainer').width()});});
+
+	(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/pt_BR/all.js#xfbml=1&appId=191413357583630";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));
+
+</script>
+
+
 <div id="voltar-nav">
 <strong><%= link_to 'Voltar', ideas_path %></strong> 
 </div>
@@ -86,7 +102,11 @@
 
 					  	<button id="idea-details" type="button" class="btn btn-default"><span class="glyphicon glyphicon-share"></span></button>
 					</div>
-				<%= render 'dynamic_map' %>
+
+					<%= render 'dynamic_map' %>
+
+					<div class="fb-comments" align="center" data-href="http://boraapp.com/ideas/#" data-numposts="5" data-colorscheme="light"></div>
+
 				</div>
 			</div>
 	</div>
