@@ -70,8 +70,7 @@ function geolocate() {
     navigator.geolocation.getCurrentPosition(function(position) {
       var geolocation = new google.maps.LatLng(
           position.coords.latitude, position.coords.longitude);
-      autocomplete.setBounds(new google.maps.LatLngBounds(geolocation,
-          geolocation));
+      autocomplete.setBounds(new google.maps.LatLngBounds(-22.909812, -43.181535));
     });
   }
 }
