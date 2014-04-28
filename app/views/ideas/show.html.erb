@@ -69,6 +69,10 @@
 						
 						<strong><h1><%= @idea.description %></h1></strong>
 						<p class="lead"><%= @idea.lead %></p>
+						<div>
+							<%= image_tag @idea.image.url(:medium)%>
+						</div>
+						<br>
 						<br>
 
 					</div>
