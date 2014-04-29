@@ -6,6 +6,8 @@ class User < ActiveRecord::Base
 
   has_many :ideas
 
+  after_validation :geocode
+
   def full_name
   [name, surname].join(' ')
 	end
