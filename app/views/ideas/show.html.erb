@@ -69,7 +69,7 @@
 						
 						<strong><h1><%= @idea.description %></h1></strong>
 						<p class="lead"><%= @idea.lead %></p>
-						<div>
+						<div id="image-show">
 							<%= image_tag @idea.image.url(:medium)%>
 						</div>
 						<br>
@@ -109,7 +109,7 @@
 					</div>
 
 					<div>
-					<%= render 'dynamic_map_geolocation_again' %>
+					<%= render 'dynamic_map_geolocation1' %>
 					</div>
 
 					<div data-width="748px" class="fb-comments" data-href="http://boraapp.com/ideas/#" data-numposts="5" data-colorscheme="light"></div>
