@@ -21,112 +21,110 @@
 <br>
 	
 	<div class="row">
-			<div class="col-md-offset-2 col-md-8">
-				<div id="show-wrapper" class="panel panel-default">
-					<div id="show-user" align="center" class="panel-title">
-			  			<div style="width: 100%; display: table;">	
-			  				<div style="display: table-row">
-        					<div id="show-user-name" align="left" style="display: table-cell;"> 
-        						<span id="user-gliph-footer" class="glyphicon glyphicon-user"></span>
-			  							<%= link_to @idea.user.full_name %>
-			  					</div>
+		<div class="col-md-offset-2 col-md-8">
+			<div id="show-wrapper" class="panel panel-default">
+				<div id="show-user" align="center" class="panel-title">
+		  			<div style="width: 100%; display: table;">	
+		  				<div style="display: table-row">
+      					<div id="show-user-name" align="left" style="display: table-cell;"> 
+      						<span id="user-gliph-footer" class="glyphicon glyphicon-user"></span>
+		  							<%= link_to @idea.user.full_name %>
+		  					</div>
 
-			  					<div id="edit-show" style="display: table-cell" align="center">
-			  					<% if @idea.user == current_user %>
-							
-										<%= link_to 'Editar ideia', edit_idea_path(@idea) %>
-		
-									<% end %>
-									</div>
-
-			  					<div id="show-post-time" style="display: table-cell" align="right">
-			  								<span class="glyphicon glyphicon-time"></span>
-			  								<%= time_ago_in_words(@idea.created_at) %>
-			  					</div>
-
-			  					
-
-			  					<% if current_user == @idea.user %>
-	        					<div id="trash-gliph-footer-div" align="right" style="display: table-cell;"> 
-	        						<%= link_to @idea, method: :delete, data: { confirm: 'Tem certeza que deseja apagar sua ideia?' } do %>
-				  							<span id="trash-gliph-footer" class="glyphicon glyphicon-trash"></span>
-				  						<% end %> 
-				  					</div>
-				  				<% end %>	
-			  				</div>
-			  			</div>
-			  	</div>
-			  	
-			  	  <div>
-              <hr id="user-header-line-show">
-            </div>
-
-			  	<br>
-			  	<br>
-
-
-					<div id="idea-title" class="panel-body center">
+		  					<div id="edit-show" style="display: table-cell" align="center">
+		  					<% if @idea.user == current_user %>
 						
-						<strong><h1><%= @idea.description %></h1></strong>
-						<p class="lead"><%= @idea.lead %></p>
-						<div id="image-show">
-							<%= image_tag @idea.image.url(:medium)%>
-						</div>
-						<br>
-						<br>
+									<%= link_to 'Editar ideia', edit_idea_path(@idea) %>
+	
+								<% end %>
+								</div>
 
+		  					<div id="show-post-time" style="display: table-cell" align="right">
+		  								<span class="glyphicon glyphicon-time"></span>
+		  								<%= time_ago_in_words(@idea.created_at) %>
+		  					</div>
+
+		  					
+
+		  					<% if current_user == @idea.user %>
+        					<div id="trash-gliph-footer-div" align="right" style="display: table-cell;"> 
+        						<%= link_to @idea, method: :delete, data: { confirm: 'Tem certeza que deseja apagar sua ideia?' } do %>
+			  							<span id="trash-gliph-footer" class="glyphicon glyphicon-trash"></span>
+			  						<% end %> 
+			  					</div>
+			  				<% end %>	
+		  				</div>
+		  			</div>
+		  	</div>
+		  	
+		  	  <div>
+            <hr id="user-header-line-show">
+          </div>
+
+		  	<br>
+		  	<br>
+
+
+				<div id="idea-title" class="panel-body center">
+					
+					<strong><h1><%= @idea.description %></h1></strong>
+					<p class="lead"><%= @idea.lead %></p>
+					<div id="image-show">
+						<%= image_tag @idea.image.url(:medium)%>
 					</div>
-
-</head>
-						<br>
-						<div id="event_datetime_show" class="center">
-			  			<p><span id="glyph-calendar-index" class="glyphicon glyphicon-calendar"></span>&nbsp&nbsp<strong><%= @idea.event_time.try(:strftime, '%d/%m/%Y, às %H:%Mh') %></strong> (faltam <%=distance_of_time_in_words_to_now(@idea.event_time)%> para o início)</p>
-			  		</div>
-
-						<div id="show-location" class="center">
-					  	<p><span id="gliph-map-marker" class="glyphicon glyphicon-map-marker"></span>&nbsp&nbsp<%= @idea.location %></p>
-			  		</div>
-						<br>
-			  	
-			  	<div id="show-img" align="center" class="img-responsive">
-			  		<%= image_tag @idea.image.url(:medium)%>
-					</div>
-
-					<div id="map-img" align="center" class="img-responsive">
-    					<%= image_tag "http://maps.googleapis.com/maps/api/staticmap?center=#{@idea.latitude},#{@idea.longitude}&zoom=13&size=400x200&scale=2&sensor=false" %>
-  				</div>
-
-  				<div class="row" align="center">
-					  	<button id="idea-details" type="button" class="btn btn-default"><span class="glyphicon glyphicon-map-marker"></span></button>
-
-					  	<button id="idea-details" type="button" class="btn btn-default"><span class="glyphicon glyphicon-road"></span></button>
-
-					  	<button id="idea-details" type="button" class="btn btn-default"><span class="glyphicon glyphicon-camera"></span></button>
-
-					  	<button id="idea-details" type="button" class="btn btn-default"><span class="glyphicon glyphicon-heart"></span></button>
-
-					  	<button id="idea-details" type="button" class="btn btn-default"><span class="glyphicon glyphicon-share"></span></button>
-					</div>
-
-					<div>
-					<%= render 'dynamic_map_geolocation1' %>
-					</div>
-
-					<div data-width="748px" class="fb-comments" data-href="http://boraapp.com/ideas/#" data-numposts="5" data-colorscheme="light"></div>
+					<br>
+					<br>
 
 				</div>
+
+					<br>
+					<div id="event_datetime_show" class="center">
+		  			<p><span id="glyph-calendar-index" class="glyphicon glyphicon-calendar"></span>&nbsp&nbsp<strong><%= @idea.event_time.try(:strftime, '%d/%m/%Y, às %H:%Mh') %></strong> (faltam <%=distance_of_time_in_words_to_now(@idea.event_time)%> para o início)</p>
+		  		</div>
+
+					<div id="show-location" class="center">
+				  	<p><span id="gliph-map-marker" class="glyphicon glyphicon-map-marker"></span>&nbsp&nbsp<%= @idea.location %></p>
+		  		</div>
+					<br>
+		  	
+		  	<div id="show-img" align="center" class="img-responsive">
+		  		<%= image_tag @idea.image.url(:medium)%>
+				</div>
+
+				<div id="map-img" align="center" class="img-responsive">
+  					<%= image_tag "http://maps.googleapis.com/maps/api/staticmap?center=#{@idea.latitude},#{@idea.longitude}&zoom=13&size=400x200&scale=2&sensor=false" %>
+				</div>
+
+				<br>
+
+				<div align="center">
+				  <div class="btn-group">
+				  	<button id="partiu-btn" type="button" class="btn btn-success">Partiu <br><span class="glyphicon glyphicon-ok"></span></button>
+				  	<button id="talvez-btn" type="button" class="btn btn-default">Talvez <br><span class="glyphicon glyphicon-minus"></span></button>
+				  	<button id="nemda-btn" type="button" class="btn btn-danger">Nem dá <br><span class="glyphicon glyphicon-remove"></span></button>
+					</div>
+				</div>
+
+				<div id="show-icons" class="row" align="center">
+				  	<button id="idea-details" type="button" class="btn btn-default"><span class="glyphicon glyphicon-map-marker"></span></button>
+
+				  	<button id="idea-details" type="button" class="btn btn-default"><span class="glyphicon glyphicon-road"></span></button>
+
+				  	<button id="idea-details" type="button" class="btn btn-default"><span class="glyphicon glyphicon-camera"></span></button>
+
+				  	<button id="idea-details" type="button" class="btn btn-default"><span class="glyphicon glyphicon-heart"></span></button>
+
+				  	<button id="idea-details" type="button" class="btn btn-default"><span class="glyphicon glyphicon-share"></span></button>
+				</div>
+
+				<div>
+				<%= render 'dynamic_map_geolocation1' %>
+				</div>
 			</div>
-	</div>
+			<div data-width="748px" class="fb-comments" data-href="http://boraapp.com/ideas/#" data-numposts="5" data-colorscheme="light"></div>
+		</div>
+
+		<br>
 
 
-<div align="center">
-  <h4><strong>Bora?</strong></h4>
-  
-  <div class="btn-group">
-  	<button id="partiu-btn" type="button" class="btn btn-success">Partiu <br><span class="glyphicon glyphicon-ok"></span></button>
-  	<button id="talvez-btn" type="button" class="btn btn-default">Talvez <br><span class="glyphicon glyphicon-minus"></span></button>
-  	<button id="nemda-btn" type="button" class="btn btn-danger">Nem dá <br><span class="glyphicon glyphicon-remove"></span></button>
-	</div>
-</div>
-<br>
-<br>
+
