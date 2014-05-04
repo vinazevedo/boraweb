@@ -95,6 +95,13 @@
     vertical-align: top;
 }
 
+#edit-gliph-footer {
+    font-size: 1em;
+    z-index: 1000;
+    color: #2e5e8e;
+    vertical-align: top;
+}
+
 #index-wrapper a {
     text-decoration: none;
 }
@@ -164,9 +171,12 @@ border-width: 1px; }
 
 #show-post-time {
     font-size: 0.9em;
-    padding-top: 4px;
+    padding-top: 5px;
     color: #a7a7a7;
     vertical-align: middle;
+    width: 190px;
+    padding-right: 20px;
+    font-color: #2e5e8e;
 }
 
 #header-line {
@@ -201,13 +211,14 @@ border-width: 1px; }
 
 #edit-show {
     vertical-align: middle;
-    left: -10px;
-    font-size: 14px;
+    padding-top: 5px;
+    font-size: 1em;
 }
 
 #trash-gliph-footer-div {
     padding-top: 5px;
     vertical-align: middle;
+    width: 30px;
 }
 
 #gliph-map-marker {
