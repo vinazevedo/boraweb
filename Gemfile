@@ -16,6 +16,7 @@ gem 'masonry-rails', '~> 0.2.0'
 gem 'geocoder'
 gem 'geoip'
 gem 'google_directions'
+gem 'fullcalendar-rails'
 
 group :development, :test do
 	gem 'sqlite3'

@@ -15,6 +15,8 @@
 //= require jquery_ujs
 //= require bootstrap
 //= require masonry/jquery.masonry
+//= require fullcalendar
+//= require gcal
 //= require_tree .
 
 

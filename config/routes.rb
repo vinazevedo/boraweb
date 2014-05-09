@@ -5,6 +5,7 @@ Boraweb::Application.routes.draw do
   root "ideas#index"
   get "about" => "pages#about"
   get "index2" => "ideas#index2"
+  get "calendar" => "pages#calendar"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

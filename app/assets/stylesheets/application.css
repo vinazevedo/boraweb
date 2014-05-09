@@ -10,5 +10,7 @@
  *
  *= require_self
  *= require 'masonry/transitions'
+ *= require fullcalendar
+ *= require fullcalendar.print
  *= require_tree .
  */
