@@ -3,13 +3,16 @@
 <% if user_signed_in? %>
     <div class="center">
       <br>
-      <h1>Próximos eventos</h1>
+      <div id="index-title">
+        <p>Próximos eventos</p>
+      </div>
       <p><%= link_to '(Ver postagens mais recentes)', ideas_path %></p>
     </div>  
 
 
     <div id="ideas" class="transitions-enabled">
       <% @ideastime.each do |idea| %>
+          <% if idea.event_time >= Time.now %>
 
             <div id="index-wrapper" class="box panel panel-default">
               <div id="show-user-index" align="center" class="panel-title">
@@ -57,6 +60,7 @@
                   </div>
               </div>
             </div>
+          <% end %>
       <% end %>
     </div>
 <% end %>
