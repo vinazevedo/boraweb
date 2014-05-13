@@ -82,7 +82,7 @@
 
 					<div id="event_datetime_show" class="center">
 		  			<p><span id="glyph-calendar-index" class="glyphicon glyphicon-calendar"></span>&nbsp&nbsp<strong><%= @idea.event_time.try(:strftime, '%d/%m/%Y, às %H:%Mh') %></strong> 
-		  			<br>(faltam <%=distance_of_time_in_words_to_now(@idea.event_time)%> para o início)</p>
+		  			<br>(faltam <%=distance_of_time_in_words_to_now(@idea.event_time)%>)</p>
 		  		</div>
 
 		  		<br>
