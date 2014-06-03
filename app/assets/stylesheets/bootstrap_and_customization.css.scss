@@ -36,10 +36,15 @@ $navbar-default-link-active-color:     white;
     text-shadow: 0px 0px 4px rgba(0, 0, 0, 1);
 }
 
+#copyright p {
+    margin: 5% auto;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
 @import 'bootstrap';
 
-#button_container
-{
+#button_container {
     top: 94%;
     position: absolute;
     width: 100%;
